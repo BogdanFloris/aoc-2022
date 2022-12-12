@@ -1,13 +1,16 @@
 import { readFileSync } from 'fs';
-import { CathodeRayTube } from './day10/cathodeRayTube';
+import { MonkeyInTheMiddle } from './day11/monkeyInTheMiddle';
 
 console.log('Welcome to Advent of Code 2022!');
 
-const input = readFileSync('./src/day10/input.txt', 'utf-8');
-const cathodeRayTube = CathodeRayTube.fromInput(input);
-cathodeRayTube.executeInstructions();
+const input = readFileSync('./src/day11/input.txt', 'utf-8');
+const monkeyInTheMiddle20 = MonkeyInTheMiddle.fromInput(input, 20);
+monkeyInTheMiddle20.playRounds();
 console.log(
-  `Day 10 Puzzle 1 answer: ${cathodeRayTube.findSignalStrengthAtCycles()}`,
+  `Day 11 Puzzle 1 answer: ${monkeyInTheMiddle20.getTwoMostActiveMonkeys()}`,
 );
-console.log('Day 10 Puzzle 2 answer:');
-console.log(cathodeRayTube.toString());
+const monkeyInTheMiddle10000 = MonkeyInTheMiddle.fromInput(input, 10000);
+monkeyInTheMiddle10000.playRounds();
+console.log(
+  `Day 11 Puzzle 2 answer: ${monkeyInTheMiddle10000.getTwoMostActiveMonkeys()}`,
+);

@@ -167,8 +167,6 @@ noop
   it('toString should return correct output', () => {
     const cathodeRayTube = CathodeRayTube.fromInput(input);
     cathodeRayTube.executeInstructions();
-    console.log(output);
-    console.log(cathodeRayTube.toString());
     expect(cathodeRayTube.toString()).toEqual(output.trim());
   });
 });
