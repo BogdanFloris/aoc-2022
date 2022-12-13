@@ -1,10 +1,14 @@
 import { readFileSync } from 'fs';
-import { Hill } from './day12/hillClimbing';
+import { DistressSignal, DividerPackets } from './day13/distressSignal';
 
 console.log('Welcome to Advent of Code 2022!');
 
-const input = readFileSync('./src/day12/input.txt', 'utf-8');
-const hillPart1 = Hill.fromInput(input, '1');
-console.log(`Day 12 Puzzle 1 answer: ${hillPart1.getShortestPath()}`);
-const hillPart2 = Hill.fromInput(input, '2');
-console.log(`Day 12 Puzzle 2 answer: ${hillPart2.getShortestPath()}`);
+const input = readFileSync('./src/day13/input.txt', 'utf-8');
+const distressSignal = DistressSignal.fromString(input);
+console.log(
+  `Day 13 Puzzle 1 answer: ${distressSignal.getSumOfIndicesOfPairsInRightOrder()}`,
+);
+const dividerPackets = DividerPackets.fromString(input);
+console.log(
+  `Day 13 Puzzle 2 answer: ${dividerPackets.getDividerPacketsIndicesProductAfterSorting()}`,
+);
