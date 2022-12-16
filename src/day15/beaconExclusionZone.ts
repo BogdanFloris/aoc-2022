@@ -70,7 +70,6 @@ export class BeaconExclusionZone {
     const min = { x: 0, y: 0 };
     const max = { x: this.max, y: this.max };
     const distressBeacon = this.findDistressBeacon(min, max);
-    console.log(`Distress beacon: ${JSON.stringify(distressBeacon)}`);
     return distressBeacon.x * 4000000 + distressBeacon.y;
   }
 
