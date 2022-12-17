@@ -1,12 +1,10 @@
 import { readFileSync } from 'fs';
-import { Tunnels } from './day16/proboscideaVolcanium';
+import { Well } from './day17/pyroclasticFlow';
 
 console.log('Welcome to Advent of Code 2022!');
 
-const input = readFileSync('./src/day16/input.txt', 'utf-8');
-const tunnelsOne = Tunnels.fromInput(input, 30);
-console.log(`Day 16 Puzzle 1 answer: ${tunnelsOne.computeMostPressure()}`);
-const tunnelsTwo = Tunnels.fromInput(input, 26);
-console.log(
-  `Day 16 Puzzle 1 answer: ${tunnelsTwo.computeMostPressureWithHelp()}`,
-);
+const input = readFileSync('./src/day17/input.txt', 'utf-8');
+const wellOne = Well.fromInput(input, 2022);
+console.log(`Day 16 Puzzle 1 answer: ${wellOne.dropRocks()}`);
+const wellTwo = Well.fromInput(input, 1000000000000);
+console.log(`Day 16 Puzzle 2 answer: ${wellTwo.dropRocks()}`);
